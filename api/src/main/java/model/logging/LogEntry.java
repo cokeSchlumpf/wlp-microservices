@@ -1,12 +1,27 @@
 package model.logging;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType(propOrder = { "id", "level", "message" })
+@XmlAccessorType(XmlAccessType.FIELD)
 public class LogEntry {
 
+	@XmlElement(name = "id")
 	private Long id;
 	
+	@XmlElement(name = "level", required = true)
 	private LogLevel level;
 	
+	@XmlElement(name = "message", required = true)
 	private String message;
+	
+	@SuppressWarnings("unused")
+	private LogEntry() {
+		
+	}
 	
 	public LogEntry(Long id, LogLevel level, String message) {
 		this.id = id;

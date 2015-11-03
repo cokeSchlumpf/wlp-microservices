@@ -31,6 +31,7 @@ public class Logs implements api.LoggingService {
 	}
 	
 	@GET
+	@Path("example")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.WILDCARD)
 	public LogEntry example() {

@@ -1,10 +1,24 @@
 package model.trade;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType(propOrder = { "id", "instrument" })
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Trade {
 
+	@XmlElement(name = "id")
 	private Long id;
 	
+	@XmlElement(name = "instrument", required = true)
 	private String instrument;
+	
+	@SuppressWarnings("unused")
+	private Trade() {
+		
+	}
 	
 	public Trade(Long id, String instrument) {
 		this.id = id;
