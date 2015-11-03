@@ -16,11 +16,12 @@ import model.logging.LogLevel;
 
 @Stateless
 @Path("logs")
-public class LoggingService implements api.LoggingService {
+public class Logs implements api.LoggingService {
 
 	private static final List<LogEntry> log = new ArrayList<>();
 	
 	@POST
+	@Override
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public LogEntry create(LogEntry entry) {
@@ -37,6 +38,7 @@ public class LoggingService implements api.LoggingService {
 	}
 
 	@GET
+	@Override
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.WILDCARD)
 	public List<LogEntry> list() {

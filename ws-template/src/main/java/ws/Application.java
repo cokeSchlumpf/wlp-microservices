@@ -9,10 +9,10 @@ import javax.ws.rs.ApplicationPath;
 public class Application extends javax.ws.rs.core.Application {
 
 	@Override
-	  public Set<Class<?>> getClasses() {
-	      HashSet<Class<?>> classes = new HashSet<Class<?>>();
-	      classes.add(CoinService.class);
-	      return classes;
-	  }
-	
+	public Set<Class<?>> getClasses() {
+		HashSet<Class<?>> classes = new HashSet<Class<?>>();
+		classes.add(CoinService.class);
+		return classes;
+	}
+
 }

@@ -15,5 +15,6 @@
     <module>api</module>
     <module>ws-logging</module>
     <module>ws-template</module>
+    <module>ws-tradeprocessing</module>
   </modules>
 </project>
